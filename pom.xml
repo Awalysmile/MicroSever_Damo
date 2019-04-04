@@ -4,6 +4,7 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
+        <module>miles_eureka_10000</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -22,7 +23,7 @@
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
     </properties>
 
-
+    <!--导入spring-clound 间接继承-->
     <dependencyManagement>
         <dependencies>
             <dependency>
