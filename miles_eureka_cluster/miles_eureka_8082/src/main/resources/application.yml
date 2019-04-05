@@ -9,10 +9,10 @@ spring:
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8082/eureka
+      defaultZone: http://www.meureka.one.com:8080/eureka,http://www.meureka.two.com:8081/eureka
     # \u8C03\u7528\u5176\u5B83\u670D\u52A1 false
     fetch-registry: false
     # \u81EA\u6211\u6CE8\u518Cfalse
-    register-with-eureka: true
+    register-with-eureka: false
   instance:
     hostname: localhost
