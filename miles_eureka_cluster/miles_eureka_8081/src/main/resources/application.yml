@@ -1,15 +1,15 @@
 # \u914D\u7F6Eeureka\u7AEF\u53E3
 server:
-  port: 8080
+  port: 8081
 
 spring:
   application:
-    name: eureka_one
+    name: eureka_two
 
 eureka:
   client:
     service-url:
-      defaultZone: http://localhost:8080/eureka
+      defaultZone: http://localhost:8081/eureka
     # \u8C03\u7528\u5176\u5B83\u670D\u52A1 false
     fetch-registry: false
     # \u81EA\u6211\u6CE8\u518Cfalse

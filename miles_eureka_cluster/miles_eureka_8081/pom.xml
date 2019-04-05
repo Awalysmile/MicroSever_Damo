@@ -4,12 +4,12 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.miles</groupId>
-        <artifactId>SpringClound_Damo</artifactId>
+        <artifactId>miles_eureka_cluster</artifactId>
         <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <artifactId>miles_eureka_8080</artifactId>
+    <artifactId>miles_eureka_8081</artifactId>
 
     <properties>
         <java.version>1.8</java.version>
