@@ -1,4 +1,4 @@
-# 配置 Eureka 端口
+# \u914D\u7F6Eeureka\u7AEF\u53E3
 server:
   port: 8080
 
@@ -10,9 +10,9 @@ eureka:
   client:
     service-url:
       defaultZone: http://localhost:8080/eureka
-    # 调用其它服务 false
+    # \u8C03\u7528\u5176\u5B83\u670D\u52A1 false
     fetch-registry: false
-    #  进行自我注册  false
+    # \u81EA\u6211\u6CE8\u518Cfalse
     register-with-eureka: true
   instance:
     hostname: localhost
