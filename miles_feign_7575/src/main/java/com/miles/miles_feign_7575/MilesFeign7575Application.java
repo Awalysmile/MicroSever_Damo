@@ -27,5 +27,7 @@ public class MilesFeign7575Application {
         bean.addUrlMappings("/hystrix.stream");
         return bean;
     }
+    // http://localhost:7575/hystrix.stream  通过此url查看服务情况。
+    // dashboard url : localhost:8088/hystrix
 
 }

@@ -1,9 +1,11 @@
 package com.miles.miles_ribbon_7070;
 
+import com.netflix.hystrix.contrib.metrics.eventstream.HystrixMetricsStreamServlet;
 import com.netflix.loadbalancer.IRule;
 import com.netflix.loadbalancer.RandomRule;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.boot.web.servlet.ServletRegistrationBean;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
 import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.cloud.netflix.eureka.EnableEurekaClient;
@@ -44,8 +46,17 @@ public class MilesRibbon7070Application {
 //        return new RetryRule();
 //    }
 
-    @Bean // spring 默认单例？todoK
+    @Bean // spring 默认单例？todo
     public IRule getIRule() {
         return new RandomRule();
+    }
+
+    @Bean  // todo Dashboard 只能监控到一个接口？ 为何？？
+    public ServletRegistrationBean getServletRegistrationBean() {
+        ServletRegistrationBean<HystrixMetricsStreamServlet> bean = new ServletRegistrationBean<>();
+        bean.setServlet(new HystrixMetricsStreamServlet());
+        bean.addUrlMappings("/hystrix.stream");
+//        bean.setUrlMappings(); //  不能用setUrlMapping 会替换掉已有的Mappings
+        return bean;
     }
 }

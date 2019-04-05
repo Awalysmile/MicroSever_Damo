@@ -1,7 +1,6 @@
 package com.miles.controller;
 
 import com.miles.feign.IMFeign;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -18,7 +17,7 @@ import javax.annotation.Resource;
 @RequestMapping("/feign")
 public class MFeignController {
 
-    @Autowired
+    @Resource
     private IMFeign imFeign;
 
     @RequestMapping("/hello")
