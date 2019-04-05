@@ -5,6 +5,7 @@
     <packaging>pom</packaging>
     <modules>
         <module>miles_eureka_8080</module>
+        <module>miles_eureka_cluster</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
