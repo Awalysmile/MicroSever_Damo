@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <packaging>pom</packaging>
     <modules>
-        <module>miles_eureka_8080</module>
         <module>miles_eureka_cluster</module>
+        <module>miles_provider_cluster</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
