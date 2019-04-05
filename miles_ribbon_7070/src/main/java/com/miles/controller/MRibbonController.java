@@ -22,14 +22,15 @@ import java.util.HashMap;
  */
 @SuppressWarnings("unused")
 @RestController
-public class MComsuerController {
+public class MRibbonController {
 
     private static String URL = "http://MILES-PROVIDER-ONE/test";
+
     @Resource
     RestTemplate restTemplate;
 
 
-    @RequestMapping("/fuck")
+    @RequestMapping("ribbon/fuck")
     public String fuck() {
         // url localhost去注册中心找到名称替换localhost
         // no instance for localhost 报错。如果有localhost实例且有对应的mapping映射，不会报错。
@@ -39,14 +40,14 @@ public class MComsuerController {
         return "fuck";
     }
 
-    @GetMapping("/hello")
+    @GetMapping("/ribbon/hello")
     public String hello() {
         String forObject = restTemplate.getForObject(URL, String.class);
         System.out.println("MProvider9090 被调用");
         return "MProvider9090 被调用" + forObject;
     }
 
-    @RequestMapping("/hell1")
+    @RequestMapping("ribbon/hell1")
     public HashMap<String, Object> hell1() {
 
         HashMap<String, Object> resultMap = Maps.newHashMap();
