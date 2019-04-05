@@ -1,0 +1,10 @@
+server:
+  port: 7575
+spring:
+  application:
+    name: m-comsumer-feign
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.meureka.one.com:8080/eureka,http://www.meureka.three.com:8082/eureka,http://www.meureka.one.com:8081/eureka
