@@ -9,7 +9,7 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
 
-    <artifactId>miles_eureka_10000</artifactId>
+    <artifactId>miles_eureka_8081</artifactId>
 
     <properties>
         <java.version>1.8</java.version>
