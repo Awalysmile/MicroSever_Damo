@@ -1,0 +1,11 @@
+server:
+  port: 7070
+spring:
+  application:
+    name: m-comsumer-ribbon
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.meureka.one.com:8080/eureka,http://www.meureka.three.com:8082/eureka,http://www.meureka.one.com:8081/eureka
+# register-with-eureka: true
+      ##    fetch-registry: true
