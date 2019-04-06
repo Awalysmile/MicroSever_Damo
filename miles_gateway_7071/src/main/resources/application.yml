@@ -14,29 +14,44 @@ spring:
   redis:
     password: root
     host: 192.168.72.23
-#  cloud:
-#    gateway:
-#      #配置gateway的路由
-#      routes:
-#        - id: m-one
-#          # ribbon
-#          uri: lb://M-COMSUMER-RIBBON
-#          predicates:
-#            - Path=/ribbon/**
-##          filters:
-##            - StripPrefix=0
-#        - id: m-two
-#          # feign
-#          uri: lb://M-COMSUMER-FEIGN
-#          predicates:
-#            - Path=/feign/**
-#          filters:
-#            - StripPrefix=1  # StripPrefix是从第一个开始？配置0报空指针
-#          #配置限流过滤器  feign
-#            - name: RequestRateLimter
-#              args:
-#                #限流bean对象 自定义 spring表达式
-#                key-resolver: '#{@milesRemoteAddressKeyResolver}'
-#                #每秒存放令牌的速率
-#                redis-rate-limiter-replenishRate: 1
-#                redis-rate-limiter.burstCapacity: 1
+  cloud:
+    gateway:
+      #配置gateway的路由
+      routes:
+        - id: m-one
+          # ribbon
+          uri: lb://M-COMSUMER-RIBBON
+          predicates:
+            - Path=/ribbon/**
+          filters:
+#            - StripPrefix=0
+              #路由熔断的过滤器的名称
+            - name: Hystrix
+              args:
+                name: default
+                fallbackUri: forward:/milesGateWayFallbackRibbon
+
+        - id: m-two
+          # feign
+          uri: lb://M-COMSUMER-FEIGN
+          predicates:
+            - Path=/feign/**
+          filters:
+            - name: Hystrix
+              args:
+                name: default
+                fallbackUri: forward:/milesGateWayFallbackFeign
+            - name: RequestRateLimiter
+              args:
+                #限流bean对象 自定义 spring表达式
+                key-resolver: '#{@milesRemoteAddressKeyResolver}'
+                #令牌的速率/s
+                redis-rate-limiter.replenishRate: 2
+                # 桶容量
+                redis-rate-limiter.burstCapacity: 2
+
+            - StripPrefix=1  # StripPrefix是从第一个开始？配置0报空指针
+            # 配置限流过滤器  feign
+
+
+

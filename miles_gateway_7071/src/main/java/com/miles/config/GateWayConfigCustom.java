@@ -3,8 +3,6 @@ package com.miles.config;
 import com.miles.filter.MGateWayFilter;
 import org.springframework.cloud.gateway.route.RouteLocator;
 import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
-import org.springframework.context.annotation.Bean;
-import org.springframework.context.annotation.Configuration;
 
 /**
  * @ClassName GateWayConfig
@@ -13,7 +11,7 @@ import org.springframework.context.annotation.Configuration;
  * @Date 2019/4/6 12:07
  * @Version 1.0
  */
-@Configuration
+//@Configuration
 public class GateWayConfigCustom {
 
 //    @Resource   // todo @Autowired
@@ -22,7 +20,7 @@ public class GateWayConfigCustom {
 //    @Autowired
 //    RouteLocatorBuilder builder;
 
-    @Bean  // 第一个route 路由ribbon 第二路由feign
+//    @Bean  // 第一个route 路由ribbon 第二路由feign
     public RouteLocator getRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(ribbon -> ribbon.path("/ribbon/**")
