@@ -1,7 +1,13 @@
 # SpringCloud_Damo
+- 数据库mysql,redis,springboot springCloud(G版)
+- 集群搞起来，五大神兽搞起电脑竟然跑不动。8G内存不够用。
+- 关掉虚拟机，关掉mysql 
 ## Eureka
+- 集群3个eureka
 - 自我保护机制
 -  server.enable-self-preservation= false
+## 服务提供
+- 集群两个，假装从外调用
 ## Ribbon
 ## Feign
 - interface调用
