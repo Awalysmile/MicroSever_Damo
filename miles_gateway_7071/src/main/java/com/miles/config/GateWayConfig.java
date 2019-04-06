@@ -10,7 +10,7 @@ import javax.annotation.Resource;
 
 /**
  * @ClassName GateWayConfig
- * @Description TODO
+ * @Description 自定义路由
  * @Author Miles
  * @Date 2019/4/6 12:07
  * @Version 1.0
