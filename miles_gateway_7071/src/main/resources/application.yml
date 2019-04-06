@@ -1,0 +1,31 @@
+server:
+  port: 7071
+
+
+#eureka 的地址
+eureka:
+  client:
+    service-url:
+      defaultZone: http://www.meureka.one.com:8080/eureka,http://www.meureka.three.com:8082/eureka,http://www.meureka.one.com:8081/eureka
+
+spring:
+  application:
+    name: miles-gateway
+  cloud:
+    gateway:
+      #配置gateway的路由
+      routes:
+        - id: m-one
+          # ribbon
+          uri: lb://M-COMSUMER-RIBBON
+          predicates:
+            - Path=/ribbon/**
+#          filters:
+#            - StripPrefix=0
+        - id: m-two
+          # feign
+          uri: lb://M-COMSUMER-FEIGN
+          predicates:
+            - Path=/feign/**
+#          filters:
+#            - StripPrefix=0  StripPrefix是从第一个开始？配置0报空指针
