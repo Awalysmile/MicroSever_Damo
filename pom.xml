@@ -6,6 +6,10 @@
     <modules>
         <module>miles_eureka_cluster</module>
         <module>miles_provider_cluster</module>
+        <module>miles_feign_7575</module>
+        <module>miles_ribbon_7070</module>
+        <module>miles_hystrix_dashboard</module>
+        <module>miles_gateway_7071</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -14,14 +18,15 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.miles</groupId>
-    <artifactId>SpringClound_Damo</artifactId>
+    <artifactId>MicroSever_Damo</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>SpringClound_Damo</name>
+    <name>MicroSever_Damo</name>
     <description>Demo project for Spring Boot</description>
 
     <properties>
         <java.version>1.8</java.version>
         <spring-cloud.version>Greenwich.RELEASE</spring-cloud.version>
+        <lombok.version>1.18.6</lombok.version>
     </properties>
 
     <!--导入spring-clound 间接继承-->
@@ -33,6 +38,12 @@
                 <version>${spring-cloud.version}</version>
                 <type>pom</type>
                 <scope>import</scope>
+            </dependency>
+
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>

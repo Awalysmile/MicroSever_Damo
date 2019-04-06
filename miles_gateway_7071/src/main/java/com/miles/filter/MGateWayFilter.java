@@ -4,12 +4,8 @@ import com.miles.emun.GateWayOrder;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.core.Ordered;
-import org.springframework.http.server.reactive.ServerHttpRequest;
-import org.springframework.util.MultiValueMap;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
-
-import java.util.Map;
 
 /**
  * @ClassName MGateWayFilter
@@ -21,12 +17,13 @@ import java.util.Map;
 public class MGateWayFilter implements GatewayFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
-        ServerHttpRequest request = exchange.getRequest(); // request
-        Object xxx = exchange.getRequiredAttribute("xxx");// required request
-        Mono<MultiValueMap<String, String>> formData = exchange.getFormData();//表单数据
-        Map<String, Object> attributes = exchange.getAttributes(); //attributes
-
-        System.out.println("请求拦截" + request.getURI().getPath());
+//        ServerHttpRequest request = exchange.getRequest(); // request
+//        Object xxx = exchange.getRequiredAttribute("xxx");// required request
+//        Mono<MultiValueMap<String, String>> formData = exchange.getFormData();//表单数据
+//        Map<String, Object> attributes = exchange.getAttributes(); //attributes
+//
+//        System.out.println("请求拦截" + request.getURI().getPath());
+        System.out.println("假装拦截了");
         return chain.filter(exchange);
     }
 

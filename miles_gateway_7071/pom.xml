@@ -4,8 +4,8 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.miles</groupId>
-        <artifactId>SpringClound_Damo</artifactId>
-        <version>0.0.1-SNAPSHOT</version>
+    <artifactId>MicroSever_Damo</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <artifactId>miles_gateway_7071</artifactId>
