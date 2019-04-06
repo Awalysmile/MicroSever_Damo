@@ -27,5 +27,5 @@ spring:
           uri: lb://M-COMSUMER-FEIGN
           predicates:
             - Path=/feign/**
-#          filters:
-#            - StripPrefix=0  StripPrefix是从第一个开始？配置0报空指针
+          filters:
+            - StripPrefix=1  # StripPrefix是从第一个开始？配置0报空指针

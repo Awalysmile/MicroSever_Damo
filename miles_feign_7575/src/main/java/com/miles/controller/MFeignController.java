@@ -14,7 +14,7 @@ import javax.annotation.Resource;
  * @Version 1.0
  */
 @RestController
-@RequestMapping("/feign")
+//@RequestMapping("/feign")
 public class MFeignController {
 
     @Resource
