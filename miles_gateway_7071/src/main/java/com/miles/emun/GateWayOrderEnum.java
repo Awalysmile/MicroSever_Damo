@@ -7,13 +7,13 @@ package com.miles.emun;
  * @Date 2019/4/6 11:15
  * @Version 1.0
  */
-public enum GateWayOrder {
-    URI_FILTER(100),
-    IP_FILTER(200);
+public enum GateWayOrderEnum {
+    GLOBAL_FILTER_ORDER(100),
+    IP_FILTER_ORDER(200);
 
     private int order;
 
-    GateWayOrder(int order) {
+    GateWayOrderEnum(int order) {
         this.order = order;
     }
 

@@ -6,8 +6,6 @@ import org.springframework.cloud.gateway.route.builder.RouteLocatorBuilder;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 
-import javax.annotation.Resource;
-
 /**
  * @ClassName GateWayConfig
  * @Description 自定义路由
@@ -16,13 +14,16 @@ import javax.annotation.Resource;
  * @Version 1.0
  */
 @Configuration
-public class GateWayConfig {
+public class GateWayConfigCustom {
 
-    @Resource
-    RouteLocatorBuilder builder;
+//    @Resource   // todo @Autowired
+////    RouteLocatorBuilder builder;
+
+//    @Autowired
+//    RouteLocatorBuilder builder;
 
     @Bean  // 第一个route 路由ribbon 第二路由feign
-    public RouteLocator getRouteLocator() {
+    public RouteLocator getRouteLocator(RouteLocatorBuilder builder) {
         return builder.routes()
                 .route(ribbon -> ribbon.path("/ribbon/**")
                         .uri("lb://M-COMSUMER-RIBBON")

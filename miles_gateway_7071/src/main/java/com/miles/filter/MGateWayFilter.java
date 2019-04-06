@@ -1,6 +1,6 @@
 package com.miles.filter;
 
-import com.miles.emun.GateWayOrder;
+import com.miles.emun.GateWayOrderEnum;
 import org.springframework.cloud.gateway.filter.GatewayFilter;
 import org.springframework.cloud.gateway.filter.GatewayFilterChain;
 import org.springframework.core.Ordered;
@@ -30,6 +30,6 @@ public class MGateWayFilter implements GatewayFilter, Ordered {
     @Override // 过滤顺序，越小权重越高
     public int getOrder() {
         System.out.println("order is working");
-        return GateWayOrder.IP_FILTER.getOrder();
+        return GateWayOrderEnum.IP_FILTER_ORDER.getOrder();
     }
 }
