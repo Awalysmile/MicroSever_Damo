@@ -1,8 +1,9 @@
 # SpringCloud_Damo
+[toc]
 - 数据库mysql,redis,springboot springCloud(G版)
 - 集群搞起来，五大神兽搞起电脑竟然跑不动。8G内存不够用。
 - 关掉虚拟机，关掉mysql 
-[toc]
+
 ## Eureka
 - 高可用，分区容错
 - 与zookeeper之间不同
