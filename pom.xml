@@ -10,6 +10,7 @@
         <module>miles_ribbon_7070</module>
         <module>miles_hystrix_dashboard</module>
         <module>miles_gateway_7071</module>
+        <module>miles_dubbo_assemblage</module>
     </modules>
     <parent>
         <groupId>org.springframework.boot</groupId>

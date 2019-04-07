@@ -3,12 +3,20 @@
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <parent>
-        <groupId>com.miles</groupId>
         <artifactId>MicroSever_Damo</artifactId>
+        <groupId>com.miles</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>miles_eureka_cluster</artifactId>
+    <!--<groupId>com.miles</groupId>-->
+    <artifactId>miles_dubbo_assemblage</artifactId>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>miles_dubbo_common_base</module>
+        <module>miles_dubbo_worker</module>
+    </modules>
+
 
 </project>
