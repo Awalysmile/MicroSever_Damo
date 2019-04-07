@@ -25,9 +25,9 @@ public class serviceImpl implements MDbService {
         System.out.println("访问数据库");
         BaseEntity baseEntity = new BaseEntity();
         baseEntity.setCreatedBy("流浪大师");
-        baseEntity.setUpdatedBy(null);
-        baseEntity.setDateCreated(new Date(2018));
-        baseEntity.setDateUpdate(new Date(2019));
+        baseEntity.setUpdatedBy("沈魏");
+        baseEntity.setDateCreated(new Date(345678909));
+        baseEntity.setDateUpdate(new Date(758707890));
         return baseEntity;
     }
 }
