@@ -1,0 +1,7 @@
+server:
+  port: 9093
+dubbo:
+  application:
+    name: miles_d_worker
+  registry:
+    address: zookeeper://192.168.72.23:2181
