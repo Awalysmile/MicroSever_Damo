@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/MicroSever_Damo.iml" filepath="$PROJECT_DIR$/MicroSever_Damo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_eureka_cluster/miles_eureka_8080/miles_eureka_8080.iml" filepath="$PROJECT_DIR$/miles_eureka_cluster/miles_eureka_8080/miles_eureka_8080.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_eureka_cluster/miles_eureka_8081/miles_eureka_8081.iml" filepath="$PROJECT_DIR$/miles_eureka_cluster/miles_eureka_8081/miles_eureka_8081.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_eureka_cluster/miles_eureka_8082/miles_eureka_8082.iml" filepath="$PROJECT_DIR$/miles_eureka_cluster/miles_eureka_8082/miles_eureka_8082.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_eureka_cluster/miles_eureka_cluster.iml" filepath="$PROJECT_DIR$/miles_eureka_cluster/miles_eureka_cluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_feign_7575/miles_feign_7575.iml" filepath="$PROJECT_DIR$/miles_feign_7575/miles_feign_7575.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_gateway_7071/miles_gateway_7071.iml" filepath="$PROJECT_DIR$/miles_gateway_7071/miles_gateway_7071.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_hystrix_dashboard/miles_hystrix_dashboard.iml" filepath="$PROJECT_DIR$/miles_hystrix_dashboard/miles_hystrix_dashboard.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_provider_cluster/miles_provider_9090/miles_provider_9090.iml" filepath="$PROJECT_DIR$/miles_provider_cluster/miles_provider_9090/miles_provider_9090.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_provider_cluster/miles_provider_9091/miles_provider_9091.iml" filepath="$PROJECT_DIR$/miles_provider_cluster/miles_provider_9091/miles_provider_9091.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_provider_cluster/miles_provider_cluster.iml" filepath="$PROJECT_DIR$/miles_provider_cluster/miles_provider_cluster.iml" />
+      <module fileurl="file://$PROJECT_DIR$/miles_ribbon_7070/miles_ribbon_7070.iml" filepath="$PROJECT_DIR$/miles_ribbon_7070/miles_ribbon_7070.iml" />
+    </modules>
+  </component>
+</project>

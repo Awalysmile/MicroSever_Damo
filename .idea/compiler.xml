@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="miles_eureka_8080" />
+        <module name="miles_eureka_8081" />
+        <module name="miles_eureka_8082" />
+        <module name="miles_eureka_cluster" />
+        <module name="miles_feign_7575" />
+        <module name="miles_gateway_7071" />
+        <module name="miles_hystrix_dashboard" />
+        <module name="miles_provider_9090" />
+        <module name="miles_provider_9091" />
+        <module name="miles_provider_cluster" />
+        <module name="miles_ribbon_7070" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="MicroSever_Damo" target="1.8" />
+      <module name="miles_eureka_8080" target="1.5" />
+      <module name="miles_eureka_8081" target="1.5" />
+      <module name="miles_eureka_8082" target="1.5" />
+      <module name="miles_eureka_cluster" target="1.5" />
+      <module name="miles_feign_7575" target="1.5" />
+      <module name="miles_gateway_7071" target="1.5" />
+      <module name="miles_hystrix_dashboard" target="1.5" />
+      <module name="miles_provider_9090" target="1.5" />
+      <module name="miles_provider_9091" target="1.5" />
+      <module name="miles_provider_cluster" target="1.5" />
+      <module name="miles_ribbon_7070" target="1.5" />
+      <module name="springcloud1808_demo" target="1.8" />
+    </bytecodeTargetLevel>
+  </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="miles_eureka_8080" options="-parameters" />
+      <module name="miles_eureka_8081" options="-parameters" />
+      <module name="miles_eureka_8082" options="-parameters" />
+      <module name="miles_eureka_cluster" options="-parameters" />
+      <module name="miles_feign_7575" options="-parameters" />
+      <module name="miles_gateway_7071" options="-parameters" />
+      <module name="miles_hystrix_dashboard" options="-parameters" />
+      <module name="miles_provider_9090" options="-parameters" />
+      <module name="miles_provider_9091" options="-parameters" />
+      <module name="miles_provider_cluster" options="-parameters" />
+      <module name="miles_ribbon_7070" options="-parameters" />
+    </option>
+  </component>
+</project>
