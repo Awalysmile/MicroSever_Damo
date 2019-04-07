@@ -31,7 +31,10 @@ public class GateWayConfigCustom {
                             .filter(new MGateWayFilter()))
                         .uri("lb://M-COMSUMER-FEIGN")
                         .id("m-feign-one")
-                ).build();
+                ).route(dubbo -> dubbo.path("/dubbo/**")
+                        .uri("lb://MILES-D-INVERKER")
+                        .id("m-dubbo"))
+                .build();
 
     }
 }

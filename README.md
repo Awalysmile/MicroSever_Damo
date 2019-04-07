@@ -36,3 +36,17 @@
     - 因此需要在main方法上注解扫包
 - 配置了route fallback 则调用服务的降级就不会触发
     - 业务需求需要提供一个默认即降级提供。
+
+## 吃饱没事做加了个dubbo
+- 如何调用dubbo服务？
+    - 方案一 ribbon 通过restTemplatey请求 dubbo 消费者api而该api去消费提供者，得到数据返回
+        - 优点： 只需要把消费者注册到eureka上,方便简单
+        - 缺点：
+            1. 非springboot项目不好整改。
+            2. 通过消费者间接调用结果，性能损耗，操作链条过长，高可用降低。
+        - 注意事项
+            1. ribbon调用时要在ribbon的服务名去映射调用。
+            2. dubbo消费者的虽然注册到eureka上，但其映射不可用。
+    - 方案二：（待 todo）spring-cloud-zookeeper 即去zookeeper上发现服务。
+        - 
+        

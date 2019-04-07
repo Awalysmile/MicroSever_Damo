@@ -6,7 +6,6 @@ import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
@@ -27,10 +26,41 @@ public class MRibbonController {
 
     private static String TEST = "http://MILES-PROVIDER-ONE/test";
     private static String GET_FROM_DB = "http://MILES-PROVIDER-ONE/getFromDb";
+    private static String DUBBO_HELLO = "http://MILES-D-INVERKER/hello";
+    private static String DUBBO_GET_INFO = "http://MILES-D-INVERKER/getOperator";
 
     @Resource
     RestTemplate restTemplate;
 
+    // todo dubbo 路由调用失败？？
+    @RequestMapping("/dubbo/hello")
+    public String invokerDubboHello() {
+        System.out.println("dubbo invoke hello");
+        return restTemplate.getForObject(DUBBO_HELLO, String.class);
+    }
+
+    // ribbon 路由调用成功
+    @RequestMapping("/ribbon/hello")
+    public String invokerDubboHello1() {
+        System.out.println("dubbo invoke hello");
+        return restTemplate.getForObject(DUBBO_HELLO, String.class);
+    }
+
+
+    // todo 调用失败 因为application name 在gateway中没有配置或在该name没有找到对应的mapping
+    @RequestMapping("/dubbo/getOperator")
+    public String invokerDubboGetOperator1() {
+        System.out.println("get operator invoker");
+        return restTemplate.getForObject(DUBBO_GET_INFO, String.class);
+
+    }
+
+    // 调用成功
+    @RequestMapping("/ribbon/getOperator")
+    public String invokerDubboGetOperator() {
+        System.out.println("get operator invoker");
+        return restTemplate.getForObject(DUBBO_GET_INFO, String.class);
+    }
 
     @RequestMapping("ribbon/fuck")
     public String fuck() {
@@ -42,12 +72,12 @@ public class MRibbonController {
         return "fuck";
     }
 
-    @GetMapping("/ribbon/hello")
-    public String hello() {
-        String forObject = restTemplate.getForObject(TEST, String.class);
-        System.out.println("MProvider9090 被调用");
-        return "MProvider9090 被调用" + forObject;
-    }
+//    @GetMapping("/ribbon/hello")
+//    public String hello() {
+//        String forObject = restTemplate.getForObject(TEST, String.class);
+//        System.out.println("MProvider9090 被调用");
+//        return "MProvider9090 被调用" + forObject;
+//    }
 
     @RequestMapping("ribbon/hell1")
     public HashMap<String, Object> hell1() {
@@ -89,6 +119,7 @@ public class MRibbonController {
 
     /**
      * 降级方法
+     *
      * @return
      */
     public String getFromDbFallback() {

@@ -18,6 +18,17 @@ spring:
     gateway:
       #配置gateway的路由
       routes:
+        - id: m-dubbo
+          uri: lb://MILES-D-INVERKER
+          predicates:
+            - Path=/dubbo/**
+          filters:
+            #- StripPrefix=0
+            #路由熔断的过滤器的名称
+            - name: Hystrix
+              args:
+                name: default
+                fallbackUri: forward:/milesGateWayFallbackRibbon
         - id: m-one
           # ribbon
           uri: lb://M-COMSUMER-RIBBON
